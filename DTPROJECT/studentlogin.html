@@ -1,0 +1,129 @@
+<html>
+<head>
+    <style>
+        *{
+            margin:0;padding:0;
+            font-family:sans-serif;
+        }
+        body{
+            width:100%;
+            height:100vh;
+            
+        }
+        .wrapper{
+            width:1518px;
+            height:719px;padding:6px;
+            background: url(flat-lay-tea-composition-with-copyspace.jpg)no-repeat;
+            background-size:cover;
+            background-position: center;
+            opacity:0.8px;padding-left: 0.8%;;
+            position: absolute;
+        }
+        .form-boxx{
+            width:380px;
+            height:480px;
+            position: absolute;
+            left: 950px;
+             border: 3px solid rgb(0, 94, 128);
+            margin:100px auto;
+            background:#EDF7F6;
+            padding :5px;
+            opacity:0.9;
+            overflow:hidden;
+        }
+        .button-box{
+            width:220px;
+            margin:35px auto;
+            position: relative;
+            box-shadow: 0 0 20px 9px #9092899f;
+            border-radius:30px;
+        }
+        .t-btn{
+            padding:10px 30px;
+            cursor:pointer;
+            background:transparent;
+            border:0;
+            outline:none;
+            position:relative;
+        }
+        #btn{
+            top:0;
+            left:0;position:absolute;
+            width:110px;height:100%;
+            background:linear-gradient(to right,#abae4bfb,#e68054fe);
+            border-radius:30px;
+            transition:.5s;
+        }
+        .input-box{
+            top:180px;
+            position:absolute;
+            width:280px;transition:.5s;
+        }
+        .input{
+            width:100%;
+            padding:10px 0;margin:5px 0;
+            border-left:0;
+            border-top:0;
+            border-right:0;
+            border-bottom:1px solid #fff;
+            outline:none;
+            border-radius:4px;
+            background:#f7f9b6fb;
+        }
+        .sub-btn{
+            width:85%;
+            padding:10px 30px;
+            cursor:pointer;
+            display:block;
+            margin:auto;
+            background:linear-gradient(to right,#abae4bfb,#e68054fe);
+            border:0;
+            outline:none;
+            border-radius:30px;
+        }
+        #login{
+            left:60px;
+        }
+        #signup{
+            left:500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="form-boxx">
+           <div class="button-box">
+            <div id="btn"></div>
+            <button type="button" class="t-btn" onclick="login()">Log In</button>
+            <button type="button" class="t-btn" onclick="signup()">Sign-up</button>
+           </div>
+        <form  id="login" class="input-box" action="studentlogincheck.jsp">
+            <input type="text" class="input" name="luser" placeholder=" username" minlength="10">
+            <input type="password" class="input"  name="lpas" placeholder=" enter password" minlength="8"required>
+            <button type="submit" class="sub-btn">Log In</button>
+        </form>
+        <form  id="signup" class="input-box" action="studentcheck.jsp">
+            <input type="text" class="input" name="sname" placeholder=" enter name" required>
+            <input type="text" class="input" name="suser" placeholder=" username" required>
+            <input type="password" class="input"  name="spass" placeholder=" enter password" required>
+            <input type="text" class="input" name="sphn" placeholder=" enter phone-no" required>
+            <button type="submit" class="sub-btn">Sign-up</button>
+        </form>
+        </div>
+    </div>
+   <script>
+    var x=document.getElementById("login");
+    var y=document.getElementById("signup");
+    var z=document.getElementById("btn");
+    function signup(){
+        x.style.left="-500px";
+        y.style.left="60px";
+        z.style.left="110px";
+    }
+    function login(){
+        x.style.left="60px";
+        y.style.left="500px";
+        z.style.left="0";
+    }
+   </script>
+</body></html>

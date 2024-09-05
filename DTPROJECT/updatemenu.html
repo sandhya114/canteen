@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <style>
+body{
+text-align:center;
+}
+            .add{
+                margin-left:1400px;
+            }
+            h3{
+                text-align:center;
+                color:red;
+                font-weight:900;
+            }
+            .wrapper{
+                margin-left:900px;
+                padding:20px;
+                background:#e7e7e7;
+                border-radius:5px;
+                width:380px;
+                position:relative;
+                visibility: hidden;
+                transition:all 5s ease-in-out;
+            }
+            .wrapper h2{
+                margin-top:0;color:#333;
+            }
+            .wrapper .close{
+                position:absolute;
+                top:20px;right:30px;transition:all 200ms;
+                font-size:30px;
+                font-weight:bold;
+                text-decoration:none;color:#333;
+            }
+            .wrapper .content{
+                max-height:200%;
+                overflow:auto;
+            }
+            .container{
+                border-radius:5px;
+                background-color: #e7e7e7;
+                padding:20px 0;
+            }
+            form label{
+                text-transform: uppercase;
+                font-weight:500;
+                letter-spacing:3px;
+            }
+            input[type=text],textarea{
+                width:100px;padding:12px;
+                border:1px solid #ccc;
+                border-radius:5px;
+                box-sizing:border-box;
+                margin-top:6px;
+            }
+             input[type="submit"]{
+                background-color: #413b3b;
+                color:#fff;
+                padding :15px 50px;border:none;
+                border-radius:50px;
+                cursor:pointer;
+                font-size:15px;
+                text-transform:uppercase;
+                letter-spacing:3px;
+             }
+             .open{
+                visibility:visible;
+             }
+                
+             
+        </style>
+    </head>
+    <body>
+        <div class="add">
+            <button type="submit" onclick="f()"><i class='bx bx-list-plus'></i></button>
+            <!-- <input type="checkbox" id="check">
+            <label for="check"><i class='bx bx-list-plus'></i></label> -->
+           <!-- <a href="#items"><i class='bx bx-list-plus'></i></a> -->
+           </div>
+            <div class="wrapper" id="items" >
+                <h2>Add item</h2>
+                <a href="updatemenu.html" class="close">&times;</a>
+                <div class="content">
+                    <div class="container">
+                        <form>
+                            <label>Food Name</label>
+                            <input type="text"  name="fname" placeholder="foodname"><br>
+                            <label>Food Type</label>
+                            <input type="text"  name="ftype" placeholder="foodtype"><br>
+                            <label>Price per plate</label>
+                            <input type="text" name="fpc" placeholder="price"><br>
+                            <input type="submit" value="add">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            let popup=document.getElementById("items");
+            function f(){
+              popup.classList.add("open");
+            }
+        </script>
+    </body>
+<body>
+<h1>hello</h1>
+</body>
+</html>
